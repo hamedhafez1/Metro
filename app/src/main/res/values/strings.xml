@@ -1,5 +1,19 @@
 <resources>
-    <string name="app_name">متروی تهران</string>
+    <string name="app_name">BaMetro</string>
+    <string name="app_name_fa">بامِترو</string>
     <string name="metro">مترو</string>
-    <string name="brt">بی‌آر‌تی</string>
+    <string name="brt">BRT</string>
+    <string name="about_us">درباره ما</string>
+    <string name="close">بستن</string>
+    <string name="about_app">با‌مِترو برنامه‌ای برای مشاهده نقشه مترو و BRT و بهشت زهرای تهران بدون نیاز به اینترنت</string>
+    <string name="about_app_2">نقشه های نمایش داده شده از وبسایت های رسمی شهرداری تهران تهیه شده است.</string>
+    <string name="version">%1$s %2$s</string>
+    <string name="thisAppVersion">با‌مِترو نسخه :</string>
+    <string name="contact_us_email"><b> ارتباط با توسعه دهنده: app.roela@gmail.com</b></string>
+    <string name="develop_by_roela_apps">طراحی و توسعه Roela Apps</string>
+    <string name="metro_map_source">metro.tehran.ir : منبع نقشه مترو</string>
+    <string name="metro_times">ساعات حرکت مترو</string>
+    <string name="behesht_zahra">بهشت زهرا</string>
+    <string name="loading">در حال بارگزاری…</string>
+    <string name="loaded">بارگزاری شد</string>
 </resources>

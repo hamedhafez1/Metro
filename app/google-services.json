@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "737225333920",
+    "project_id": "bametro-3601f",
+    "storage_bucket": "bametro-3601f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737225333920:android:598ef0113875dce485fdc5",
+        "android_client_info": {
+          "package_name": "ir.roela.bametro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737225333920-j0mr701ffm71coi9j5hfmj4nigc72hb0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbMu-orqVu-349Ntr0Eiv9J1Xi-KyjFUo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737225333920-j0mr701ffm71coi9j5hfmj4nigc72hb0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

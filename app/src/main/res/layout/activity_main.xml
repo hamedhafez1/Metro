@@ -13,6 +13,8 @@
         android:layout_height="wrap_content"
         app:tabIndicatorHeight="2dp"
         app:tabInlineLabel="true"
+        app:tabMode="scrollable"
+        style="@style/TabStyle"
         app:tabTextAppearance="@style/CustomTabText">
 
         <com.google.android.material.tabs.TabItem
@@ -21,17 +23,23 @@
             android:icon="@drawable/ic_subway_24"
             android:text="@string/metro" />
 
+<!--        <com.google.android.material.tabs.TabItem-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:icon="@drawable/ic_subway_24"-->
+<!--            android:text="@string/metro_times" />-->
+
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_bus_24"
             android:text="@string/brt" />
 
-<!--        <com.google.android.material.tabs.TabItem-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:icon="@android:drawable/ic_menu_close_clear_cancel"-->
-<!--            android:text="ساعت" />-->
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:icon="@drawable/ic_baseline_filter_vintage_24"
+            android:text="@string/behesht_zahra" />
 
     </com.google.android.material.tabs.TabLayout>
 

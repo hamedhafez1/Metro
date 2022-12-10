@@ -1,4 +1,4 @@
-package ir.roela.metro
+package ir.roela.bametro
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
@@ -11,12 +11,13 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
         return when (position) {
             0 -> MapFragment.newInstance(MapType.METRO)
             1 -> MapFragment.newInstance(MapType.BUS)
+            2 -> MapFragment.newInstance(MapType.CEMETERY)
             else -> MapFragment.newInstance(MapType.METRO)
         }
     }
 
     override fun getItemCount(): Int {
-        return 2
+        return 3
     }
 
 }
