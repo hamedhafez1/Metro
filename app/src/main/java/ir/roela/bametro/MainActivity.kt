@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
                         )
                     )
                     .setView(R.layout.about_us)
-                    .setNegativeButton(R.string.close) { dialog, p1 ->
+                    .setNegativeButton(R.string.close) { dialog, _ ->
                         dialog?.dismiss()
                     }
                     .show()

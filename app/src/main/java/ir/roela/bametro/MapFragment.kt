@@ -63,6 +63,12 @@ class MapFragment : Fragment() {
             MapType.BUS.value -> {
                 loadMap("file:///android_asset/brt/brt.html")
             }
+            MapType.TEHRAN_MAP.value -> {
+                loadMap("file:///android_asset/tehran_map/tehran_map.html")
+            }
+            MapType.MOUNT_TEHRAN.value -> {
+                loadMap("file:///android_asset/kooh_tehran/kooh_tehran.html")
+            }
             MapType.CEMETERY.value -> {
                 loadMap("file:///android_asset/behesht_zahra/behesht_zahra.html")
             }

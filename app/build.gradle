@@ -5,8 +5,8 @@ plugins {
 }
 
 android {
+    namespace 'ir.roela.bametro'
     compileSdk 33
-
     defaultConfig {
         applicationId "ir.roela.bametro"
         minSdk 21
