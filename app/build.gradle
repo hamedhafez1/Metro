@@ -11,8 +11,8 @@ android {
         applicationId "ir.roela.bametro"
         minSdk 21
         targetSdk 33
-        versionCode 101
-        versionName "1.01"
+        versionCode 120
+        versionName "1.20"
     }
 
     buildTypes {
