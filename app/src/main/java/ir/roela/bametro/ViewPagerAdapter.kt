@@ -12,14 +12,15 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
             0 -> MapFragment.newInstance(MapType.METRO)
             1 -> MapFragment.newInstance(MapType.BUS)
             2 -> MapFragment.newInstance(MapType.TEHRAN_MAP)
-            3 -> MapFragment.newInstance(MapType.MOUNT_TEHRAN)
-            4 -> MapFragment.newInstance(MapType.CEMETERY)
+            3 -> NeshanMapFragment.newInstance()
+            4 -> MapFragment.newInstance(MapType.MOUNT_TEHRAN)
+            5 -> MapFragment.newInstance(MapType.CEMETERY)
             else -> MapFragment.newInstance(MapType.METRO)
         }
     }
 
     override fun getItemCount(): Int {
-        return 5
+        return 6
     }
 
 }
