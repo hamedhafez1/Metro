@@ -19,7 +19,7 @@
     <string name="loaded">بارگزاری شد</string>
     <string name="kooh_tehran">کوهستان</string>
     <string name="tehran_map">نقشه آفلاین تهران</string>
-    <string name="online_map">نقشه آنلاین تهران</string>
+    <string name="online_map">نقشه آنلاین</string>
     <string name="isfahan_metro">مترو اصفهان</string>
     <string name="tabriz_metro">مترو تبریز</string>
     <string name="location_permission_granted">مجوز دسترسی به موقعیت داده شد</string>
