@@ -21,17 +21,25 @@
             android:id="@+id/txtAbout2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:padding="12dp"
             android:text="@string/about_app_2" />
+
+        <TextView
+            android:id="@+id/txtAbout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:padding="12dp"
+            android:text="@string/about_app_3" />
 
         <TextView
             android:id="@+id/txtDeveloperName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="8dp"
             android:text="@string/develop_by_roela_apps"
             android:textColor="@color/purple_200"
             android:textSize="13sp" />

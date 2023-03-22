@@ -14,7 +14,20 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(LayoutInflater.from(this))
+//        val binding = ActivityMainGridBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
+
+//        val gridView = binding.gridview
+//        val mainItemsList = ArrayList<MainItemModel>()
+//        mainItemsList.add(MainItemModel(R.string.metro, R.drawable.ic_subway_24))
+//        mainItemsList.add(MainItemModel(R.string.brt, R.drawable.ic_bus_24))
+//        mainItemsList.add(MainItemModel(R.string.metro, R.drawable.ic_subway_24))
+//        mainItemsList.add(MainItemModel(R.string.brt, R.drawable.ic_bus_24))
+//        mainItemsList.add(MainItemModel(R.string.metro, R.drawable.ic_subway_24))
+//        mainItemsList.add(MainItemModel(R.string.brt, R.drawable.ic_bus_24))
+//        mainItemsList.add(MainItemModel(R.string.metro, R.drawable.ic_subway_24))
+//        mainItemsList.add(MainItemModel(R.string.brt, R.drawable.ic_bus_24))
+//        gridView.adapter = MainItemsGVAdapter(this, mainItemsList)
 
         val tabLayout = binding.tabLayout
         val viewPager = binding.viewPager

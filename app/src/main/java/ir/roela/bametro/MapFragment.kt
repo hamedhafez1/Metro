@@ -54,26 +54,32 @@ class MapFragment : Fragment() {
         mapWebView.settings.builtInZoomControls = true
         mapWebView.settings.displayZoomControls = false
         when (mapType.value) {
-            MapType.METRO.value -> {
+            MapType.TEHRAN_METRO.value -> {
                 loadMap("file:///android_asset/metro/metro.html")
             }
-            MapType.METRO_TIMES.value -> {
+            /*MapType.METRO_TIMES.value -> {
                 loadMap("file:///android_asset/metro_times/metro_times.html")
-            }
-            MapType.BUS.value -> {
+            }*/
+            MapType.TEHRAN_BRT_BUS.value -> {
                 loadMap("file:///android_asset/brt/brt.html")
             }
-            MapType.TEHRAN_MAP.value -> {
+            MapType.TEHRAN_MAP_OFFLINE.value -> {
                 loadMap("file:///android_asset/tehran_map/tehran_map.html")
             }
-            MapType.MOUNT_TEHRAN.value -> {
+            MapType.TEHRAN_MOUNT.value -> {
                 loadMap("file:///android_asset/kooh_tehran/kooh_tehran.html")
             }
-            MapType.CEMETERY.value -> {
+            MapType.TEHRAN_CEMETERY.value -> {
                 loadMap("file:///android_asset/behesht_zahra/behesht_zahra.html")
             }
+            MapType.ISFAHAN_METRO.value -> {
+                loadMap("file:///android_asset/isfahan/isfahan_metro.html")
+            }
+            MapType.TABRIZ_METRO.value -> {
+                loadMap("file:///android_asset/tabriz/tabriz_metro.html")
+            }
             else -> {
-                loadMap("file:///android_asset/metro.html")
+                loadMap("file:///android_asset/metro/metro.html")
             }
         }
         mapWebView.webViewClient = object : WebViewClient() {

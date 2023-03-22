@@ -3,24 +3,42 @@ package ir.roela.bametro
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import ir.roela.bametro.neshan.NeshanMapFragment
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {
 
+    private val tabsArray = arrayOf(
+        MapType.METRO_TIMES,
+        MapType.TEHRAN_BRT_BUS,
+        MapType.TEHRAN_MAP_OFFLINE,
+        MapType.TEHRAN_MAP_ONLINE,
+        MapType.TEHRAN_MOUNT,
+        MapType.TEHRAN_CEMETERY,
+        MapType.ISFAHAN_METRO,
+        MapType.TABRIZ_METRO,
+    )
+
     override fun createFragment(position: Int): Fragment {
-        return when (position) {
-            0 -> MapFragment.newInstance(MapType.METRO)
-            1 -> MapFragment.newInstance(MapType.BUS)
-            2 -> MapFragment.newInstance(MapType.TEHRAN_MAP)
-            3 -> NeshanMapFragment.newInstance()
-            4 -> MapFragment.newInstance(MapType.MOUNT_TEHRAN)
-            5 -> MapFragment.newInstance(MapType.CEMETERY)
-            else -> MapFragment.newInstance(MapType.METRO)
+        return if (position == 3) {
+            NeshanMapFragment.newInstance()
+        } else {
+            MapFragment.newInstance(tabsArray[position])
         }
+        /*return when (position) {
+            0 -> MapFragment.newInstance(tabsArray[0])
+            1 -> MapFragment.newInstance(tabsArray[1])
+            2 -> MapFragment.newInstance(tabsArray[2])
+            3 -> NeshanMapFragment.newInstance()
+            4 -> MapFragment.newInstance(tabsArray[4])
+            5 -> MapFragment.newInstance(tabsArray[5])
+            6 -> MapFragment.newInstance(tabsArray[6])
+            else -> MapFragment.newInstance(tabsArray[0])
+        }*/
     }
 
     override fun getItemCount(): Int {
-        return 6
+        return tabsArray.size
     }
 
 }

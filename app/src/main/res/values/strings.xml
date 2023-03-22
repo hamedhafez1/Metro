@@ -5,8 +5,9 @@
     <string name="brt">BRT</string>
     <string name="about_us">درباره ما</string>
     <string name="close">بستن</string>
-    <string name="about_app">با‌مِترو برنامه‌ای برای مشاهده نقشه مترو و BRT و بهشت زهرای تهران بدون نیاز به اینترنت</string>
-    <string name="about_app_2">نقشه های نمایش داده شده از وبسایت های رسمی شهرداری تهران تهیه شده است.</string>
+    <string name="about_app">با‌مِترو برنامه‌ای برای مشاهده نقشه مترو و BRT ، کوهستان ، بهشت زهرا ، متروی مراکز استانها بدون نیاز به اینترنت</string>
+    <string name="about_app_2">نقشه های نمایش داده شده از وبسایت های رسمی شهرداری تهیه شده است.</string>
+    <string name="about_app_3">برای نمایش نقشه آنلاین از سکوی neshan.org استفاده شده است.</string>
     <string name="version">%1$s %2$s</string>
     <string name="thisAppVersion">با‌مِترو نسخه :</string>
     <string name="contact_us_email"><b> ارتباط با توسعه دهنده: app.roela@gmail.com</b></string>
@@ -19,4 +20,8 @@
     <string name="kooh_tehran">کوهستان</string>
     <string name="tehran_map">نقشه آفلاین تهران</string>
     <string name="online_map">نقشه آنلاین تهران</string>
+    <string name="isfahan_metro">مترو اصفهان</string>
+    <string name="tabriz_metro">مترو تبریز</string>
+    <string name="location_permission_granted">مجوز دسترسی به موقعیت داده شد</string>
+    <string name="location_permission_not_granted">مجوز دسترسی به موقعیت داده نشد</string>
 </resources>
