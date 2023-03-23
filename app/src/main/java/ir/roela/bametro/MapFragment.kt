@@ -105,7 +105,7 @@ class MapFragment : Fragment() {
     private fun loadMap(url: String) {
         Handler(Looper.getMainLooper()).postDelayed({
             mapWebView.loadUrl(url)
-        }, 500)
+        }, 250)
     }
 
 
