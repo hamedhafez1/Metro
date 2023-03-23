@@ -9,9 +9,9 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {
 
     private val tabsArray = arrayOf(
+        MapType.TEHRAN_MAP_ONLINE,
         MapType.METRO_TIMES,
         MapType.TEHRAN_BRT_BUS,
-        MapType.TEHRAN_MAP_ONLINE,
         MapType.TEHRAN_MAP_OFFLINE,
         MapType.TEHRAN_MOUNT,
         MapType.TEHRAN_CEMETERY,
@@ -20,7 +20,7 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     )
 
     override fun createFragment(position: Int): Fragment {
-        return if (position == 2) {
+        return if (position == 0) {
             NeshanMapFragment.newInstance()
         } else {
             MapFragment.newInstance(tabsArray[position])

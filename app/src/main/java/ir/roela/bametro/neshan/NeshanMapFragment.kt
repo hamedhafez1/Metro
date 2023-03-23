@@ -8,9 +8,12 @@ import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
 import android.provider.Settings
+import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.ViewGroup.LayoutParams
+import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -37,30 +40,44 @@ class NeshanMapFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            val textView = TextView(requireContext())
+            textView.setText(R.string.this_section_not_supported_on_your_device)
+            textView.textSize = 20F
+            val params = LayoutParams(
+                LayoutParams.WRAP_CONTENT,
+                LayoutParams.WRAP_CONTENT
+            )
+            params.width = LayoutParams.MATCH_PARENT
+            params.height = LayoutParams.MATCH_PARENT
+            textView.layoutParams = params
+            textView.gravity = Gravity.CENTER
+            return textView
+        }
         fragmentNeshanMapBinding = FragmentNeshanMapBinding.inflate(LayoutInflater.from(context))
         return fragmentNeshanMapBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            checkLocationPermission().let { isGranted ->
+                if (!isGranted) {
+                    startLocationPermissionRequest()
+                }
+            }
 
-        checkLocationPermission().let { isGranted ->
-            if (!isGranted) {
-                startLocationPermissionRequest()
+            neshanMap = fragmentNeshanMapBinding.neshanMap
+            neshanMap.settings.isZoomControlsEnabled = true
+            neshanMap.myLocationEnabled = true
+            neshanMap.settings.isMyLocationButtonEnabled = true
+            neshanMap.setOnMyLocationButtonClickListener {
+                if (checkLocationPermission() && !isLocationEnabled()) {
+                    startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
+                }
+                false
             }
         }
-
-        neshanMap = fragmentNeshanMapBinding.neshanMap
-        neshanMap.settings.isZoomControlsEnabled = true
-        neshanMap.myLocationEnabled = true
-        neshanMap.settings.isMyLocationButtonEnabled = true
-        neshanMap.setOnMyLocationButtonClickListener {
-            if (checkLocationPermission() && !isLocationEnabled()) {
-                startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
-            }
-            false
-        }
-
     }
 
     private val requestPermissionLauncher = registerForActivityResult(

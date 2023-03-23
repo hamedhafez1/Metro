@@ -24,4 +24,5 @@
     <string name="tabriz_metro">مترو تبریز</string>
     <string name="location_permission_granted">مجوز دسترسی به موقعیت داده شد</string>
     <string name="location_permission_not_granted">مجوز دسترسی به موقعیت داده نشد</string>
+    <string name="this_section_not_supported_on_your_device">این قسمت در دستگاه شما پشتیبانی نمی‌شود</string>
 </resources>
