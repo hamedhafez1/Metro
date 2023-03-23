@@ -20,7 +20,7 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     )
 
     override fun createFragment(position: Int): Fragment {
-        return if (position == 3) {
+        return if (position == 2) {
             NeshanMapFragment.newInstance()
         } else {
             MapFragment.newInstance(tabsArray[position])
