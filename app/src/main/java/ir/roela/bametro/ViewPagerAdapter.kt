@@ -11,8 +11,8 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     private val tabsArray = arrayOf(
         MapType.METRO_TIMES,
         MapType.TEHRAN_BRT_BUS,
-        MapType.TEHRAN_MAP_OFFLINE,
         MapType.TEHRAN_MAP_ONLINE,
+        MapType.TEHRAN_MAP_OFFLINE,
         MapType.TEHRAN_MOUNT,
         MapType.TEHRAN_CEMETERY,
         MapType.ISFAHAN_METRO,
