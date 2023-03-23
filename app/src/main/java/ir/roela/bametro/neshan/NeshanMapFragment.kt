@@ -55,7 +55,7 @@ class NeshanMapFragment : Fragment() {
         neshanMap.myLocationEnabled = true
         neshanMap.settings.isMyLocationButtonEnabled = true
         neshanMap.setOnMyLocationButtonClickListener {
-            if (!isLocationEnabled()) {
+            if (checkLocationPermission() && !isLocationEnabled()) {
                 startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
             }
             false

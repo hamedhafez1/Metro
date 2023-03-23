@@ -35,7 +35,7 @@ class MapFragment : Fragment() {
         loadingSnackBar = Snackbar.make(
             requireActivity().findViewById(android.R.id.content),
             R.string.loading,
-            Snackbar.LENGTH_INDEFINITE
+            Snackbar.LENGTH_SHORT
         )
     }
 
@@ -53,29 +53,29 @@ class MapFragment : Fragment() {
         mapWebView.settings.setSupportZoom(true)
         mapWebView.settings.builtInZoomControls = true
         mapWebView.settings.displayZoomControls = false
-        when (mapType.value) {
-            MapType.TEHRAN_METRO.value -> {
+        when (mapType) {
+            MapType.TEHRAN_METRO -> {
                 loadMap("file:///android_asset/metro/metro.html")
             }
             /*MapType.METRO_TIMES.value -> {
                 loadMap("file:///android_asset/metro_times/metro_times.html")
             }*/
-            MapType.TEHRAN_BRT_BUS.value -> {
+            MapType.TEHRAN_BRT_BUS -> {
                 loadMap("file:///android_asset/brt/brt.html")
             }
-            MapType.TEHRAN_MAP_OFFLINE.value -> {
+            MapType.TEHRAN_MAP_OFFLINE -> {
                 loadMap("file:///android_asset/tehran_map/tehran_map.html")
             }
-            MapType.TEHRAN_MOUNT.value -> {
+            MapType.TEHRAN_MOUNT -> {
                 loadMap("file:///android_asset/kooh_tehran/kooh_tehran.html")
             }
-            MapType.TEHRAN_CEMETERY.value -> {
+            MapType.TEHRAN_CEMETERY -> {
                 loadMap("file:///android_asset/behesht_zahra/behesht_zahra.html")
             }
-            MapType.ISFAHAN_METRO.value -> {
+            MapType.ISFAHAN_METRO -> {
                 loadMap("file:///android_asset/isfahan/isfahan_metro.html")
             }
-            MapType.TABRIZ_METRO.value -> {
+            MapType.TABRIZ_METRO -> {
                 loadMap("file:///android_asset/tabriz/tabriz_metro.html")
             }
             else -> {
@@ -93,11 +93,11 @@ class MapFragment : Fragment() {
 
             override fun onPageFinished(view: WebView?, url: String?) {
                 super.onPageFinished(view, url)
-                loadingSnackBar.setText(R.string.loaded)
+                /*loadingSnackBar.setText(R.string.loaded)
                 Handler(Looper.getMainLooper()).postDelayed({
                     if (loadingSnackBar.isShown)
                         loadingSnackBar.dismiss()
-                }, 500)
+                }, 500)*/
             }
         }
     }
