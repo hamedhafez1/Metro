@@ -1,5 +1,6 @@
 package ir.roela.bametro
 
+import android.os.Build
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.Menu
@@ -50,6 +51,11 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            /*tabLayout.getTabAt(0)?.view?.isEnabled = false*/
+            tabLayout.getTabAt(1)?.select()
+        }
 
     }
 
