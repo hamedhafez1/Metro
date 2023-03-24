@@ -34,7 +34,7 @@ android {
         viewBinding true
     }
     lintOptions {
-        checkReleaseBuilds false
+//        checkReleaseBuilds false
     }
     splits {
         abi {
