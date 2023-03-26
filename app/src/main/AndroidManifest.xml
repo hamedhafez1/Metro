@@ -27,6 +27,8 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".neshan.NeshanActivity"/>
+
         <service
             android:name=".MyFirebaseMessagingService"
             android:exported="false">
