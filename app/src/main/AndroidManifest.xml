@@ -27,7 +27,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".neshan.NeshanActivity"/>
+        <activity android:name=".neshan.NeshanActivity"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
 
         <service
             android:name=".MyFirebaseMessagingService"
