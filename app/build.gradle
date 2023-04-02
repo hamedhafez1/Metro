@@ -11,8 +11,8 @@ android {
         applicationId "ir.roela.bametro"
         minSdk 19
         targetSdk 33
-        versionCode 150
-        versionName "1.50"
+        versionCode 151
+        versionName "1.51"
         multiDexEnabled true
     }
 
