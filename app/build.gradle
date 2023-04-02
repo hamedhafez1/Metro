@@ -33,17 +33,17 @@ android {
     buildFeatures {
         viewBinding true
     }
-    lintOptions {
-//        checkReleaseBuilds false
-    }
-    splits {
+    /*lintOptions {
+        checkReleaseBuilds false
+    }*/
+    /*splits {
         abi {
             enable true
             reset()
             include 'armeabi-v7a', 'arm64-v8a', 'x86', 'x86_64'
             universalApk false
         }
-    }
+    }*/
 }
 
 dependencies {
@@ -56,9 +56,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-messaging:23.1.1'
 
     //Neshan sdk library
-    implementation 'neshan-android-sdk:services-sdk:1.0.0@aar'
+    /*implementation 'neshan-android-sdk:services-sdk:1.0.0@aar'
     implementation 'neshan-android-sdk:mobile-sdk:1.0.1@aar'
-    implementation 'neshan-android-sdk:common-sdk:0.0.2@aar'
+    implementation 'neshan-android-sdk:common-sdk:0.0.2@aar'*/
 
     //Play Services
     implementation 'com.google.android.gms:play-services-gcm:17.0.0'

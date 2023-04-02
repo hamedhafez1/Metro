@@ -2,12 +2,10 @@ package ir.roela.bametro.neshan
 
 import android.Manifest
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -20,12 +18,11 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import ir.roela.bametro.R
 import ir.roela.bametro.databinding.FragmentNeshanMapBinding
-import org.neshan.mapsdk.MapView
 
 class NeshanMapFragment : Fragment() {
 
     private lateinit var fragmentNeshanMapBinding: FragmentNeshanMapBinding
-    private lateinit var neshanMap: MapView
+//    private lateinit var neshanMap: MapView
 
     companion object {
 
@@ -67,7 +64,7 @@ class NeshanMapFragment : Fragment() {
                 }
             }
 
-            neshanMap = fragmentNeshanMapBinding.neshanMap
+            /*neshanMap = fragmentNeshanMapBinding.neshanMap
             neshanMap.settings.isZoomControlsEnabled = true
             neshanMap.myLocationEnabled = true
             neshanMap.settings.isMyLocationButtonEnabled = true
@@ -76,7 +73,7 @@ class NeshanMapFragment : Fragment() {
                     startActivity(Intent(Settings.ACTION_LOCATION_SOURCE_SETTINGS))
                 }
                 false
-            }
+            }*/
         }
     }
 

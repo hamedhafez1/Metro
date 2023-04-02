@@ -2,12 +2,10 @@ package ir.roela.bametro.neshan
 
 import android.Manifest
 import android.content.Context
-import android.content.Intent
 import android.content.pm.PackageManager
 import android.location.LocationManager
 import android.os.Build
 import android.os.Bundle
-import android.provider.Settings
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -18,8 +16,6 @@ import androidx.core.content.ContextCompat
 import com.google.android.material.snackbar.Snackbar
 import ir.roela.bametro.R
 import ir.roela.bametro.databinding.FragmentNeshanMapBinding
-import org.neshan.common.model.LatLng
-import org.neshan.mapsdk.MapView
 
 class NeshanActivity : AppCompatActivity() {
 
@@ -39,7 +35,7 @@ class NeshanActivity : AppCompatActivity() {
 
 
     private var userLocation: Location? = null*/
-    private lateinit var neshanMap: MapView
+    /*private lateinit var neshanMap: MapView*/
 
     /*private lateinit var fusedLocationClient: FusedLocationProviderClient
     private lateinit var settingsClient: SettingsClient
@@ -113,7 +109,7 @@ class NeshanActivity : AppCompatActivity() {
 //    }
 //
     private fun initMap() {
-        neshanMap = binding.neshanMap
+        /*neshanMap = binding.neshanMap
         neshanMap.settings.isZoomControlsEnabled = true
         neshanMap.myLocationEnabled = true
         neshanMap.settings.isMyLocationButtonEnabled = true
@@ -125,7 +121,7 @@ class NeshanActivity : AppCompatActivity() {
         }
         // Setting map focal position to a fixed position and setting camera zoom
         neshanMap.moveCamera(LatLng(35.701, 51.419), 0f)
-        neshanMap.setZoom(14f, 0f)
+        neshanMap.setZoom(14f, 0f)*/
     }
 //
 //    private fun initViews() {

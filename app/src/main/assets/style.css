@@ -8,14 +8,16 @@ html,
 body {
     height: 100%;
     padding: 8px;
-    background : #eee;
+    background : #ccc;
     text-align: center;
 }
 
 .notice {
     width: 100vh;
-    color: #444;
-    /*background: lightgray;*/
+    color: #038084;
+    font-size: 22px;
+    font-weight: bold;
+    background: lightgray;
     text-align: center;
     margin:8px auto;
     border-radius: 4px;
