@@ -9,7 +9,7 @@ android {
     compileSdk 33
     defaultConfig {
         applicationId "ir.roela.bametro"
-        minSdk 19
+        minSdk 21
         targetSdk 33
         versionCode 151
         versionName "1.51"
