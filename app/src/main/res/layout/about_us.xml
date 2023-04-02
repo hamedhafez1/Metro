@@ -32,6 +32,7 @@
             android:layout_marginBottom="8dp"
             android:gravity="center"
             android:padding="12dp"
+            android:visibility="gone"
             android:text="@string/about_app_3" />
 
         <TextView
@@ -41,7 +42,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="8dp"
             android:text="@string/develop_by_roela_apps"
-            android:textColor="@color/purple_200"
+            android:textColor="@color/orange"
             android:textSize="13sp" />
 
         <TextView

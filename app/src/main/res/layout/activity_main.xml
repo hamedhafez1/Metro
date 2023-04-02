@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:icon="@drawable/ic_subway_24"
-            android:text="@string/metro" />
+            android:text="@string/tehran_metro" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"

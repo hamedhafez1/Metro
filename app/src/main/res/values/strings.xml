@@ -1,12 +1,12 @@
 <resources>
     <string name="app_name">BaMetro</string>
     <string name="app_name_fa">بامِترو</string>
-    <string name="metro">مترو</string>
+    <string name="tehran_metro">مترو تهران</string>
     <string name="brt">BRT</string>
     <string name="about_us">درباره ما</string>
     <string name="close">بستن</string>
-    <string name="about_app">با‌مِترو برنامه‌ای برای مشاهده نقشه مترو و BRT ، کوهستان ، بهشت زهرا ، متروی مراکز استانها بدون نیاز به اینترنت</string>
-    <string name="about_app_2">نقشه های نمایش داده شده از وبسایت های رسمی شهرداری تهیه شده است.</string>
+    <string name="about_app">با‌مِترو برنامه‌ای برای مشاهده نقشه مترو ، BRT ، کوهستان ، بهشت زهرا ، متروی مراکز استانها بدون نیاز به اینترنت</string>
+    <string name="about_app_2">نقشه های نمایش داده شده از وبسایت های رسمی شهرداری یا سازمان های مربوطه تهیه شده است. این برنامه درستی یا غلط بودن اطلاعات نمایش داده شده را تایید یا رد نمی‌کند. برخی اطلاعات نمایش داده شده نیز ممکن است به روز نباشند.</string>
     <string name="about_app_3">برای نمایش نقشه آنلاین از سکوی neshan.org استفاده شده است.</string>
     <string name="version">%1$s %2$s</string>
     <string name="thisAppVersion">با‌مِترو نسخه :</string>
@@ -17,7 +17,7 @@
     <string name="behesht_zahra">بهشت زهرا</string>
     <string name="loading">در حال بارگزاری…</string>
     <string name="loaded">بارگزاری شد</string>
-    <string name="kooh_tehran">کوهستان</string>
+    <string name="kooh_tehran">کوهستان تهران</string>
     <string name="tehran_map">نقشه آفلاین تهران</string>
     <string name="online_map">نقشه آنلاین</string>
     <string name="isfahan_metro">مترو اصفهان</string>

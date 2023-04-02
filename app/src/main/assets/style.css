@@ -9,12 +9,23 @@ body {
     height: 100%;
     padding: 8px;
     background : #eee;
+    text-align: center;
+}
+
+.notice {
+    width: 100vh;
+    color: #444;
+    /*background: lightgray;*/
+    text-align: center;
+    margin:8px auto;
+    border-radius: 4px;
+    box-shadow: 1px 1px 4px #444;
 }
 
 img {
     height: 100%;
     padding: 2px;
-    border: 2px solid gray;
+    border: 2px solid lightgray;
     border-radius: 4px;
 }
 

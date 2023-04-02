@@ -9,34 +9,36 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
-import com.google.android.material.snackbar.Snackbar
 import ir.roela.bametro.databinding.FragmentMapBinding
+import ir.roela.bametro.grid.MainItemModel
 
 
 class MapFragment : Fragment() {
 
     private lateinit var fragmentMapBinding: FragmentMapBinding
     private lateinit var mapWebView: WebView
-    private lateinit var loadingSnackBar: Snackbar
+    private lateinit var mapToolbar: Toolbar
+//    private lateinit var loadingSnackBar: Snackbar
 
     companion object {
-        private lateinit var mapType: MapType
+        private lateinit var mainItemModel: MainItemModel
 
         @JvmStatic
-        fun newInstance(mapType: MapType): MapFragment {
-            this.mapType = mapType
+        fun newInstance(mainItemModel: MainItemModel): MapFragment {
+            this.mainItemModel = mainItemModel
             return MapFragment()
         }
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        loadingSnackBar = Snackbar.make(
-            requireActivity().findViewById(android.R.id.content),
-            R.string.loading,
-            Snackbar.LENGTH_SHORT
-        )
+//        loadingSnackBar = Snackbar.make(
+//            requireActivity().findViewById(android.R.id.content),
+//            R.string.loading,
+//            Snackbar.LENGTH_SHORT
+//        )
     }
 
     override fun onCreateView(
@@ -44,22 +46,30 @@ class MapFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         fragmentMapBinding = FragmentMapBinding.inflate(LayoutInflater.from(context))
+        mapToolbar = fragmentMapBinding.mapToolbar
+        mapWebView = fragmentMapBinding.mapWebView
+
+        mapToolbar.setTitle(mainItemModel.itemName)
+        mapToolbar.setNavigationIcon(R.drawable.ic_arrow_back)
+        mapToolbar.setNavigationOnClickListener {
+            Handler(Looper.getMainLooper()).postDelayed({
+                requireActivity().onBackPressedDispatcher.onBackPressed()
+            }, 100)
+        }
+
         return fragmentMapBinding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        mapWebView = fragmentMapBinding.mapWebView
         mapWebView.settings.setSupportZoom(true)
         mapWebView.settings.builtInZoomControls = true
         mapWebView.settings.displayZoomControls = false
-        when (mapType) {
+
+        when (mainItemModel.mapType) {
             MapType.TEHRAN_METRO -> {
                 loadMap("file:///android_asset/metro/metro.html")
             }
-            /*MapType.METRO_TIMES.value -> {
-                loadMap("file:///android_asset/metro_times/metro_times.html")
-            }*/
             MapType.TEHRAN_BRT_BUS -> {
                 loadMap("file:///android_asset/brt/brt.html")
             }
@@ -85,10 +95,10 @@ class MapFragment : Fragment() {
         mapWebView.webViewClient = object : WebViewClient() {
             override fun onPageStarted(view: WebView?, url: String?, favicon: Bitmap?) {
                 super.onPageStarted(view, url, favicon)
-                if (!loadingSnackBar.isShown) {
-                    loadingSnackBar.setText(R.string.loading)
-                    loadingSnackBar.show()
-                }
+//                if (!loadingSnackBar.isShown) {
+//                    loadingSnackBar.setText(R.string.loading)
+//                    loadingSnackBar.show()
+//                }
             }
 
             override fun onPageFinished(view: WebView?, url: String?) {
@@ -103,9 +113,7 @@ class MapFragment : Fragment() {
     }
 
     private fun loadMap(url: String) {
-        Handler(Looper.getMainLooper()).postDelayed({
-            mapWebView.loadUrl(url)
-        }, 250)
+        mapWebView.loadUrl(url)
     }
 
 

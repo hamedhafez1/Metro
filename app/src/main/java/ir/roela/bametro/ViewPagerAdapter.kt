@@ -23,7 +23,8 @@ class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
         return if (position == 0) {
             NeshanMapFragment.newInstance()
         } else {
-            MapFragment.newInstance(tabsArray[position])
+//            MapFragment.newInstance(tabsArray[position])
+            Fragment()
         }
         /*return when (position) {
             0 -> MapFragment.newInstance(tabsArray[0])
