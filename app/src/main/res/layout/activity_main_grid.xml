@@ -15,6 +15,7 @@
         android:gravity="center"
         android:textAlignment="center"
         app:menu="@menu/main_activity_menu"
+        app:titleTextColor="@color/white"
         app:title="@string/app_name_fa" />
 
     <GridView

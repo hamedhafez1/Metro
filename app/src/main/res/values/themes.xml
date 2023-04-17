@@ -16,12 +16,4 @@
         <item name="android:layoutDirection">rtl</item>
         <item name="fontFamily">@font/app_font</item>
     </style>
-
-    <style name="CustomTabText" parent="TextAppearance.Design.Tab">
-        <item name="android:textSize">16sp</item>
-    </style>
-
-    <style name="TabStyle" parent="TextAppearance.Design.Tab">
-        <item name="android:background">#ddd</item>
-    </style>
 </resources>
