@@ -1,4 +1,4 @@
-package ir.roela.bametro
+package ir.roela.bametro.utils
 
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage

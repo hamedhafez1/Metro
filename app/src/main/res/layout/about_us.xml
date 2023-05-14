@@ -14,6 +14,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="16dp"
+            android:paddingHorizontal="8dp"
             android:text="@string/about_app"
             android:textStyle="bold" />
 
@@ -23,7 +24,41 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="12dp"
+            android:paddingHorizontal="8dp"
             android:text="@string/about_app_2" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="8dp"
+            android:text="@string/scan_barcode_for_download_this_app"
+            android:textColor="@color/orange" />
+
+        <ImageView
+            android:id="@+id/img_bazaar_qrcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="4dp"
+            android:contentDescription="@string/qrcode"
+            android:src="@drawable/cafe_bazaar_qrcode" />
+
+        <Button
+            android:id="@+id/btn_open_bazaar_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="4dp"
+            android:text="@string/rate_and_comment_please" />
+
+        <Button
+            android:id="@+id/btn_open_bazaar_my_apps_page"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="4dp"
+            android:text="@string/our_apps_in_bazaar" />
 
         <TextView
             android:id="@+id/txtAbout3"
@@ -32,8 +67,8 @@
             android:layout_marginBottom="8dp"
             android:gravity="center"
             android:padding="12dp"
-            android:visibility="gone"
-            android:text="@string/about_app_3" />
+            android:text="@string/about_app_3"
+            android:visibility="gone" />
 
         <TextView
             android:id="@+id/txtDeveloperName"
@@ -43,7 +78,7 @@
             android:layout_marginBottom="8dp"
             android:text="@string/develop_by_roela_apps"
             android:textColor="@color/orange"
-            android:textSize="13sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/txtContactUs"

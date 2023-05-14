@@ -1,9 +1,10 @@
-package ir.roela.bametro
+package ir.roela.bametro.utils
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import ir.roela.bametro.neshan.NeshanMapFragment
+import ir.roela.bametro.utils.MapType
 
 class ViewPagerAdapter(fragmentActivity: FragmentActivity) :
     FragmentStateAdapter(fragmentActivity) {

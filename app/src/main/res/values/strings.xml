@@ -25,4 +25,13 @@
     <string name="location_permission_granted">مجوز دسترسی به موقعیت داده شد</string>
     <string name="location_permission_not_granted">مجوز دسترسی به موقعیت داده نشد</string>
     <string name="this_section_not_supported_on_your_device">این قسمت در دستگاه شما پشتیبانی نمی‌شود</string>
+    <string name="tehran_bok_fair">نمایشگاه کتاب تهران</string>
+    <string name="metro_brt_combined">ترکیبی مترو و BRT</string>
+    <string name="istanbul_metro">مترو استانبول 🌍</string>
+    <string name="dubai_metro">مترو دوبی 🌍</string>
+<!--    <string name="rate_and_comment_please">با امتیاز و نظر دادن این برنامه را حمایت کنید</string>-->
+    <string name="rate_and_comment_please">امتیاز دادن به برنامه</string>
+    <string name="our_apps_in_bazaar">برنامه های دیگر ما</string>
+    <string name="scan_barcode_for_download_this_app">برای دانلود و اشتراک گذاری این برنامه بارکد زیر را اسکن نمایید</string>
+    <string name="qrcode">qrcode</string>
 </resources>

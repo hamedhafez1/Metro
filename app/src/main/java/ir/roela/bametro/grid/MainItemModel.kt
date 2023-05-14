@@ -1,5 +1,5 @@
 package ir.roela.bametro.grid
 
-import ir.roela.bametro.MapType
+import ir.roela.bametro.utils.MapType
 
-class MainItemModel(val mapType: MapType,var itemName: Int, var imageId: Int)
+class MainItemModel(val mapType: MapType, var itemName: Int, var imageId: Int)

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragment.MapFragment">
+    tools:context=".ImageMapActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/map_toolbar"
@@ -16,9 +16,10 @@
         app:title="@string/tehran_metro"
         app:titleTextColor="@color/white" />
 
-    <WebView
-        android:id="@+id/map_web_view"
+    <ImageView
+        android:id="@+id/mapImgView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:contentDescription="@string/app_name_fa" />
 
 </LinearLayout>

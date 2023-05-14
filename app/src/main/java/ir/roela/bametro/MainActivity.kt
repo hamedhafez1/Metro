@@ -1,16 +1,21 @@
 package ir.roela.bametro
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import ir.roela.bametro.databinding.AboutUsBinding
 import ir.roela.bametro.databinding.ActivityMainGridBinding
+import ir.roela.bametro.fragment.MapFragment
 import ir.roela.bametro.grid.MainItemsGVAdapter
 import ir.roela.bametro.grid.getMainItemArray
 import ir.roela.bametro.neshan.NeshanActivity
+import ir.roela.bametro.utils.MapType
 
 class MainActivity : AppCompatActivity() {
 
@@ -59,7 +64,38 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_about_us -> {
-                AlertDialog.Builder(this)
+                val aboutUsViewBinding = AboutUsBinding.inflate(LayoutInflater.from(this))
+                aboutUsViewBinding.btnOpenBazaarPage.setOnClickListener {
+                    try {
+                        val intent = Intent(Intent.ACTION_EDIT)
+                        intent.data = Uri.parse("bazaar://details?id=" + BuildConfig.APPLICATION_ID)
+                        intent.setPackage("com.farsitel.bazaar")
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        Log.e("bametro", e.message.toString())
+                    }
+                }
+                aboutUsViewBinding.imgBazaarQrcode.setOnClickListener {
+                    try {
+                        val intent = Intent(Intent.ACTION_VIEW)
+                        intent.data = Uri.parse("bazaar://details?id=" + BuildConfig.APPLICATION_ID)
+                        intent.setPackage("com.farsitel.bazaar")
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        Log.e("bametro", e.message.toString())
+                    }
+                }
+                aboutUsViewBinding.btnOpenBazaarMyAppsPage.setOnClickListener {
+                    try {
+                        val intent = Intent(Intent.ACTION_VIEW)
+                        intent.data = Uri.parse("bazaar://collection?slug=by_author&aid=roela_apps")
+                        intent.setPackage("com.farsitel.bazaar")
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        Log.e("bametro", e.message.toString())
+                    }
+                }
+                val dialog = AlertDialog.Builder(this)
                     .setTitle(
                         getString(
                             R.string.version,
@@ -67,11 +103,11 @@ class MainActivity : AppCompatActivity() {
                             BuildConfig.VERSION_NAME
                         )
                     )
-                    .setView(R.layout.about_us)
+                    .setView(aboutUsViewBinding.root)
                     .setNegativeButton(R.string.close) { dialog, _ ->
                         dialog?.dismiss()
                     }
-                    .show()
+                dialog.show()
             }
         }
         return true

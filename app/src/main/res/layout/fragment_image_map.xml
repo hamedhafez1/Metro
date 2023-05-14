@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".fragment.MapFragment">
+    tools:context=".fragment.ImageMapFragment">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/map_toolbar"
@@ -16,9 +16,24 @@
         app:title="@string/tehran_metro"
         app:titleTextColor="@color/white" />
 
-    <WebView
-        android:id="@+id/map_web_view"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <WebView
+            android:id="@+id/map_web_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/mapImgView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"
+            android:contentDescription="@string/app_name_fa" />
+
+    </RelativeLayout>
+
 
 </LinearLayout>
