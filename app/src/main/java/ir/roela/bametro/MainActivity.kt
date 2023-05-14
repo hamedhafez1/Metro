@@ -65,31 +65,28 @@ class MainActivity : AppCompatActivity() {
         when (item.itemId) {
             R.id.menu_about_us -> {
                 val aboutUsViewBinding = AboutUsBinding.inflate(LayoutInflater.from(this))
-                aboutUsViewBinding.btnOpenBazaarPage.setOnClickListener {
+                aboutUsViewBinding.btnOpenCommentPage.setOnClickListener {
                     try {
-                        val intent = Intent(Intent.ACTION_EDIT)
-                        intent.data = Uri.parse("bazaar://details?id=" + BuildConfig.APPLICATION_ID)
-                        intent.setPackage("com.farsitel.bazaar")
+                        val intent = Intent(Intent.ACTION_VIEW)
+                        intent.data = Uri.parse("myket://comment?id=" + BuildConfig.APPLICATION_ID)
                         startActivity(intent)
                     } catch (e: Exception) {
                         Log.e("bametro", e.message.toString())
                     }
                 }
-                aboutUsViewBinding.imgBazaarQrcode.setOnClickListener {
+                aboutUsViewBinding.imgQrcode.setOnClickListener {
                     try {
                         val intent = Intent(Intent.ACTION_VIEW)
-                        intent.data = Uri.parse("bazaar://details?id=" + BuildConfig.APPLICATION_ID)
-                        intent.setPackage("com.farsitel.bazaar")
+                        intent.data = Uri.parse("myket://details?id=" + BuildConfig.APPLICATION_ID)
                         startActivity(intent)
                     } catch (e: Exception) {
                         Log.e("bametro", e.message.toString())
                     }
                 }
-                aboutUsViewBinding.btnOpenBazaarMyAppsPage.setOnClickListener {
+                aboutUsViewBinding.btnOpenMyAppsPage.setOnClickListener {
                     try {
                         val intent = Intent(Intent.ACTION_VIEW)
-                        intent.data = Uri.parse("bazaar://collection?slug=by_author&aid=roela_apps")
-                        intent.setPackage("com.farsitel.bazaar")
+                        intent.data = Uri.parse("myket://developer/" + BuildConfig.APPLICATION_ID)
                         startActivity(intent)
                     } catch (e: Exception) {
                         Log.e("bametro", e.message.toString())

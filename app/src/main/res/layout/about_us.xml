@@ -36,16 +36,16 @@
             android:textColor="@color/orange" />
 
         <ImageView
-            android:id="@+id/img_bazaar_qrcode"
+            android:id="@+id/img_qrcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginVertical="4dp"
             android:contentDescription="@string/qrcode"
-            android:src="@drawable/cafe_bazaar_qrcode" />
+            android:src="@drawable/mykey_qrcode" />
 
         <Button
-            android:id="@+id/btn_open_bazaar_page"
+            android:id="@+id/btn_open_comment_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -53,7 +53,7 @@
             android:text="@string/rate_and_comment_please" />
 
         <Button
-            android:id="@+id/btn_open_bazaar_my_apps_page"
+            android:id="@+id/btn_open_my_apps_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
