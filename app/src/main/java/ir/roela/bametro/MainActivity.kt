@@ -9,7 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import ir.roela.bametro.databinding.AboutUsBinding
+import ir.roela.bametro.databinding.AboutUsMyketBinding
 import ir.roela.bametro.databinding.ActivityMainGridBinding
 import ir.roela.bametro.fragment.MapFragment
 import ir.roela.bametro.grid.MainItemsGVAdapter
@@ -64,11 +64,12 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_about_us -> {
-                val aboutUsViewBinding = AboutUsBinding.inflate(LayoutInflater.from(this))
+                val aboutUsViewBinding = AboutUsMyketBinding.inflate(LayoutInflater.from(this))
                 aboutUsViewBinding.btnOpenCommentPage.setOnClickListener {
                     try {
                         val intent = Intent(Intent.ACTION_VIEW)
                         intent.data = Uri.parse("myket://comment?id=" + BuildConfig.APPLICATION_ID)
+//                        intent.setPackage("com.farsitel.bazaar")
                         startActivity(intent)
                     } catch (e: Exception) {
                         Log.e("bametro", e.message.toString())
@@ -78,6 +79,7 @@ class MainActivity : AppCompatActivity() {
                     try {
                         val intent = Intent(Intent.ACTION_VIEW)
                         intent.data = Uri.parse("myket://details?id=" + BuildConfig.APPLICATION_ID)
+//                        intent.setPackage("com.farsitel.bazaar")
                         startActivity(intent)
                     } catch (e: Exception) {
                         Log.e("bametro", e.message.toString())
@@ -87,6 +89,7 @@ class MainActivity : AppCompatActivity() {
                     try {
                         val intent = Intent(Intent.ACTION_VIEW)
                         intent.data = Uri.parse("myket://developer/" + BuildConfig.APPLICATION_ID)
+//                        intent.setPackage("com.farsitel.bazaar")
                         startActivity(intent)
                     } catch (e: Exception) {
                         Log.e("bametro", e.message.toString())
