@@ -11,8 +11,8 @@ android {
         applicationId "ir.roela.bametro"
         minSdk 21
         targetSdk 33
-        versionCode 154
-        versionName "1.54"
+        versionCode 170
+        versionName "1.7"
         multiDexEnabled true
     }
 
@@ -47,13 +47,15 @@ android {
 }
 
 dependencies {
-    implementation 'androidx.core:core-ktx:1.9.0'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation project(':SimpleWeatherModule')
+
+    implementation 'androidx.core:core-ktx:1.10.1'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation platform('com.google.firebase:firebase-bom:31.1.1')
     implementation 'com.google.firebase:firebase-analytics-ktx'
-    implementation 'com.google.firebase:firebase-messaging:23.1.2'
+    implementation 'com.google.firebase:firebase-messaging:23.2.0'
 
     //Neshan sdk library
     /*implementation 'neshan-android-sdk:services-sdk:1.0.0@aar'

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="DegreeStyle">
+        <item name="fontFamily">@font/dseg_seven_modern_mini</item>
+    </style>
+</resources>
