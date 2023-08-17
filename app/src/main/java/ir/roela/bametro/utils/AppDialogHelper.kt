@@ -9,7 +9,7 @@ import android.view.View
 import androidx.appcompat.app.AlertDialog
 import ir.roela.bametro.BuildConfig
 import ir.roela.bametro.R
-import ir.roela.bametro.databinding.AboutUsBinding
+import ir.roela.bametro.databinding.AboutUsMyketBinding
 
 class AppDialogHelper(context: Context) : AlertDialog.Builder(context) {
     companion object {
@@ -53,33 +53,30 @@ class AppDialogHelper(context: Context) : AlertDialog.Builder(context) {
         }
     }
 
-    fun showAboutUsCafeBazaar() {
-        val aboutUsViewBinding = AboutUsBinding.inflate(LayoutInflater.from(context))
-        aboutUsViewBinding.btnOpenBazaarPage.setOnClickListener {
+    fun showAboutUs() {
+        val aboutUsViewBinding = AboutUsMyketBinding.inflate(LayoutInflater.from(context))
+        aboutUsViewBinding.btnOpenCommentPage.setOnClickListener {
             try {
-                val intent = Intent(Intent.ACTION_EDIT)
-                intent.data = Uri.parse("bazaar://details?id=" + BuildConfig.APPLICATION_ID)
-                intent.setPackage("com.farsitel.bazaar")
+                val intent = Intent(Intent.ACTION_VIEW)
+                intent.data = Uri.parse("myket://comment?id=" + BuildConfig.APPLICATION_ID)
                 context.startActivity(intent)
             } catch (e: Exception) {
                 Log.e("bametro", e.message.toString())
             }
         }
-        aboutUsViewBinding.imgBazaarQrcode.setOnClickListener {
+        aboutUsViewBinding.imgQrcode.setOnClickListener {
             try {
                 val intent = Intent(Intent.ACTION_VIEW)
-                intent.data = Uri.parse("bazaar://details?id=" + BuildConfig.APPLICATION_ID)
-                intent.setPackage("com.farsitel.bazaar")
+                intent.data = Uri.parse("myket://details?id=" + BuildConfig.APPLICATION_ID)
                 context.startActivity(intent)
             } catch (e: Exception) {
                 Log.e("bametro", e.message.toString())
             }
         }
-        aboutUsViewBinding.btnOpenBazaarMyAppsPage.setOnClickListener {
+        aboutUsViewBinding.btnOpenMyAppsPage.setOnClickListener {
             try {
                 val intent = Intent(Intent.ACTION_VIEW)
-                intent.data = Uri.parse("bazaar://collection?slug=by_author&aid=roela_apps")
-                intent.setPackage("com.farsitel.bazaar")
+                intent.data = Uri.parse("myket://developer/" + BuildConfig.APPLICATION_ID)
                 context.startActivity(intent)
             } catch (e: Exception) {
                 Log.e("bametro", e.message.toString())

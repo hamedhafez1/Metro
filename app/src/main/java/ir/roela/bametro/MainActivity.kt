@@ -98,7 +98,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_about_us -> {
-                AppDialogHelper(this).showAboutUsCafeBazaar()
+                AppDialogHelper(this).showAboutUs()
             }
         }
         return true
