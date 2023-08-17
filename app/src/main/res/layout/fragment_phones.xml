@@ -1,25 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".fragment.MapFragment">
+    android:orientation="vertical">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/map_toolbar"
+        android:id="@+id/toolbar"
         style="?actionBarStyle"
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:background="@color/deep_orange"
         app:title="@string/tehran_metro"
-        app:menu="@menu/map_fragment_menu"
         app:titleTextColor="@color/white" />
 
-    <WebView
-        android:id="@+id/map_web_view"
+    <ScrollView
+        android:id="@+id/scroll_phones"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:id="@+id/lyt_phones"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"/>
+    </ScrollView>
 </LinearLayout>

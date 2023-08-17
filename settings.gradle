@@ -15,3 +15,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "bametro"
 include ':app'
+include ':SimpleWeatherModule'

@@ -1,6 +1,7 @@
 package ir.roela.bametro.utils
 
 enum class MapType(val value: String) {
+    IRAN_NECESSARY_PHONES("IRAN_NECESSARY_PHONES"),
     TEHRAN_METRO("TEHRAN_METRO"),
     TEHRAN_BRT_BUS("TEHRAN_BRT_BUS"),
     TEHRAN_METRO_BRT_COMBINED("TEHRAN_METRO_BRT_COMBINED"),

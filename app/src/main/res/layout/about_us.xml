@@ -107,6 +107,15 @@
             android:textColorLink="#888"
             android:textSize="12sp" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:text="@string/weather_api_copyright"
+            android:textColorLink="#888"
+            android:textSize="12sp" />
+
     </LinearLayout>
 
 </ScrollView>
