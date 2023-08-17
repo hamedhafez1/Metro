@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainGridBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
-
+        addWeatherFragment()
         val maninToolbar = binding.mainToolbar
         setSupportActionBar(maninToolbar)
         val gridView = binding.gridview
@@ -75,7 +75,6 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
-        addWeatherFragment()
     }
 
     private fun openFragment(fragment: Fragment, tag: String) {
