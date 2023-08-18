@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import ir.roela.bametro.databinding.ActivityMainGridBinding
 import ir.roela.bametro.fragment.MapFragment
@@ -15,17 +16,20 @@ import ir.roela.bametro.grid.getMainItemArray
 import ir.roela.bametro.neshan.NeshanActivity
 import ir.roela.bametro.utils.AppDialogHelper
 import ir.roela.bametro.utils.MapType
+import ir.roela.bametro.utils.WelcomeText
 import ir.roela.simpleweathermodule.SimpleWeatherFragment
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var mainToolbar: Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainGridBinding.inflate(LayoutInflater.from(this))
         setContentView(binding.root)
 
-        val maninToolbar = binding.mainToolbar
-        setSupportActionBar(maninToolbar)
+        mainToolbar = binding.mainToolbar
+        setSupportActionBar(mainToolbar)
         val gridView = binding.gridview
 
         val menuItems = getMainItemArray()
@@ -76,6 +80,13 @@ class MainActivity : AppCompatActivity() {
             }
         }
         addWeatherFragment()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        WelcomeText().getWelcome().let { welcomeText ->
+            mainToolbar.title = "${getString(R.string.app_name_fa)} :  $welcomeText"
+        }
     }
 
     private fun openFragment(fragment: Fragment, tag: String) {
