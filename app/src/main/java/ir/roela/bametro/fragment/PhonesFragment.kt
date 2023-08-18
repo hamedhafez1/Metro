@@ -56,7 +56,7 @@ class PhonesFragment : Fragment() {
             necessaryPhoneCard.txtPhoneTel.text = item.getString("phone")
             necessaryPhoneCard.txtPhoneTel.setOnClickListener {
                 val intent = Intent(Intent.ACTION_DIAL)
-                intent.data = Uri.parse("tel:${item.getString("phone")}")
+                intent.data = Uri.parse("tel:021${item.getString("phone")}")
                 startActivity(intent)
             }
             lytPhones.addView(necessaryPhoneCard.root, i)

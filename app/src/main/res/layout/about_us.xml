@@ -13,10 +13,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:padding="16dp"
-            android:paddingHorizontal="8dp"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
             android:text="@string/about_app"
-            android:textStyle="bold" />
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/txtAbout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:paddingBottom="8dp"
+            android:text="@string/about_app_1"
+            android:textStyle="normal" />
 
         <TextView
             android:id="@+id/txtAbout2"
@@ -24,7 +34,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="12dp"
-            android:paddingHorizontal="8dp"
+            android:paddingHorizontal="24dp"
             android:text="@string/about_app_2" />
 
         <TextView
