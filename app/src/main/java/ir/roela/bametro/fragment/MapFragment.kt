@@ -1,19 +1,15 @@
 package ir.roela.bametro.fragment
 
-import android.content.DialogInterface
 import android.graphics.Bitmap
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
-import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.webkit.WebViewClient
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.google.android.material.snackbar.Snackbar
 import ir.roela.bametro.R
@@ -64,7 +60,8 @@ class MapFragment : Fragment() {
             }
             setOnMenuItemClickListener { item ->
                 if (item.itemId == R.id.menu_help) {
-                    AppDialogHelper(requireContext()).showHelpRequireInternet(mainItemModel.isOffline).show()
+                    AppDialogHelper(requireContext()).showHelpRequireInternet(mainItemModel.isOffline)
+                        .show()
                 }
                 true
             }
@@ -123,6 +120,11 @@ class MapFragment : Fragment() {
                 loadMap("file:///android_asset/dubai/dubai_metro.html")
             }
 
+            MapType.NAJAF_KARBALA_MAP -> {
+                requireInternetConnection()
+                loadMap("file:///android_asset/iraq/najaf_karbala.html")
+            }
+
             else -> {
                 loadMap("file:///android_asset/metro/metro.html")
             }
@@ -156,6 +158,7 @@ class MapFragment : Fragment() {
     private fun requireInternetConnection() {
         try {
             loadingSnackBar.setText(R.string.internet_is_require)
+            loadingSnackBar.duration = 3000
             loadingSnackBar.show()
         } catch (e: Exception) {
             Log.e(TAG, "requireInternetConnection: ${e.message}")
