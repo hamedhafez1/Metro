@@ -41,4 +41,5 @@
     <string name="help">راهنما</string>
     <string name="weather_api_copyright"> منبع اطالاعات هواشناسی : openweathermap.org</string>
     <string name="enter">به هر حال باز شود</string>
+    <string name="open_wireless_settings">رفتن به تنظیمات اینترنت</string>
 </resources>

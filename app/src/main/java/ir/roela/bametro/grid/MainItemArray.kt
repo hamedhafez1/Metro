@@ -40,11 +40,11 @@ fun getMainItemArray(): List<MainItemModel> {
             R.drawable.ic_dubai_burj_al_arab,
             false
         ),
-        MainItemModel(
-            MapType.NAJAF_KARBALA_MAP,
-            R.string.najaf_karbala,
-            R.drawable.ic_mosque_48,
-            false
-        )
+//        MainItemModel(
+//            MapType.NAJAF_KARBALA_MAP,
+//            R.string.najaf_karbala,
+//            R.drawable.ic_mosque_48,
+//            false
+//        )
     )
 }

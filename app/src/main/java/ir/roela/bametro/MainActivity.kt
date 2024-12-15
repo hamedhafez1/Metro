@@ -50,32 +50,32 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 else -> {
-                    if (!menuItems[position].isOffline) {
-                        App.isNetworkConnected(this).let {
-                            if (it) {
-                                openFragment(
-                                    MapFragment.newInstance(menuItems[position]),
-                                    mapType.toString()
-                                )
-                            } else {
-                                AppDialogHelper(this).showHelpRequireInternet(false)
-                                    .setPositiveButton(
-                                        R.string.enter
-                                    ) { dialog, _ ->
-                                        dialog.dismiss()
-                                        openFragment(
-                                            MapFragment.newInstance(menuItems[position]),
-                                            mapType.toString()
-                                        )
-                                    }.show()
-                            }
-                        }
-                    } else {
+//                    if (!menuItems[position].isOffline) {
+//                        App.isNetworkConnected(this).let {
+//                            if (it) {
+//                                openFragment(
+//                                    MapFragment.newInstance(menuItems[position]),
+//                                    mapType.toString()
+//                                )
+//                            } else {
+//                                AppDialogHelper(this).showHelpRequireInternet(false)
+//                                    .setPositiveButton(
+//                                        R.string.enter
+//                                    ) { dialog, _ ->
+//                                        dialog.dismiss()
+//                                        openFragment(
+//                                            MapFragment.newInstance(menuItems[position]),
+//                                            mapType.toString()
+//                                        )
+//                                    }.show()
+//                            }
+//                        }
+//                    } else {
                         openFragment(
                             MapFragment.newInstance(menuItems[position]),
                             mapType.toString()
                         )
-                    }
+//                    }
                 }
             }
         }

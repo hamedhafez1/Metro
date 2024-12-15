@@ -21,13 +21,13 @@ class AppDialogHelper(context: Context) : AlertDialog.Builder(context) {
             val message = if (isOffline) {
                 "نمایش این نقشه به اینترنت نیاز ندارد."
             } else {
-                "نمایش این نقشه به اینترنت نیاز دارد."
+                "نمایش این نقشه برای اولین بار به اینترنت نیاز دارد. در استفاده های بعدی نیازی به اتصال اینترنتی نیست."
             }
             setTitle(R.string.help)
             setMessage(message)
-            setNegativeButton(
-                R.string.close
-            ) { dialog, _ -> dialog.dismiss() }
+//            setNegativeButton(
+//                R.string.close
+//            ) { dialog, _ -> dialog.dismiss() }
         } catch (e: Exception) {
             Log.e(TAG, "showHelpDialog: ${e.message}")
         }
