@@ -13,20 +13,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingHorizontal="16dp"
-            android:paddingVertical="8dp"
+            android:padding="16dp"
+            android:paddingHorizontal="8dp"
             android:text="@string/about_app"
-            android:textStyle="normal" />
-
-        <TextView
-            android:id="@+id/txtAbout1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:paddingHorizontal="16dp"
-            android:paddingBottom="8dp"
-            android:text="@string/about_app_1"
-            android:textStyle="normal" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txtAbout2"
@@ -34,7 +24,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="12dp"
-            android:paddingHorizontal="24dp"
+            android:paddingHorizontal="8dp"
             android:text="@string/about_app_2" />
 
         <TextView
@@ -46,31 +36,35 @@
             android:textColor="@color/orange" />
 
         <ImageView
-            android:id="@+id/img_bazaar_qrcode"
+            android:id="@+id/img_qrcode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginVertical="4dp"
             android:contentDescription="@string/qrcode"
-            android:src="@drawable/cafe_bazaar_qrcode" />
+            android:src="@drawable/mykey_qrcode" />
 
         <Button
-            android:id="@+id/btn_open_bazaar_page"
+            android:id="@+id/btn_open_comment_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginVertical="4dp"
+            android:backgroundTint="#0091EA"
             android:drawableEnd="@drawable/baseline_star_half_24"
-            android:text="@string/rate_and_comment_please" />
+            android:text="@string/rate_and_comment_please"
+            android:textColor="@color/white" />
 
         <Button
-            android:id="@+id/btn_open_bazaar_my_apps_page"
+            android:id="@+id/btn_open_my_apps_page"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginVertical="4dp"
+            android:backgroundTint="#0091EA"
             android:drawableEnd="@drawable/baseline_apps_24"
-            android:text="@string/our_apps_in_bazaar" />
+            android:text="@string/our_apps_in_bazaar"
+            android:textColor="@color/white" />
 
         <TextView
             android:id="@+id/txtAbout3"
@@ -110,15 +104,6 @@
             android:layout_marginTop="0dp"
             android:gravity="center"
             android:text="@string/metro_map_source"
-            android:textColorLink="#888"
-            android:textSize="12sp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="0dp"
-            android:gravity="center"
-            android:text="@string/weather_api_copyright"
             android:textColorLink="#888"
             android:textSize="12sp" />
 
