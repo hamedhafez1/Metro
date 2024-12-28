@@ -50,32 +50,10 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 else -> {
-//                    if (!menuItems[position].isOffline) {
-//                        App.isNetworkConnected(this).let {
-//                            if (it) {
-//                                openFragment(
-//                                    MapFragment.newInstance(menuItems[position]),
-//                                    mapType.toString()
-//                                )
-//                            } else {
-//                                AppDialogHelper(this).showHelpRequireInternet(false)
-//                                    .setPositiveButton(
-//                                        R.string.enter
-//                                    ) { dialog, _ ->
-//                                        dialog.dismiss()
-//                                        openFragment(
-//                                            MapFragment.newInstance(menuItems[position]),
-//                                            mapType.toString()
-//                                        )
-//                                    }.show()
-//                            }
-//                        }
-//                    } else {
-                        openFragment(
-                            MapFragment.newInstance(menuItems[position]),
-                            mapType.toString()
-                        )
-//                    }
+                    openFragment(
+                        MapFragment.newInstance(menuItems[position]),
+                        mapType.toString()
+                    )
                 }
             }
         }
@@ -109,7 +87,10 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.menu_about_us -> {
+                /**Cafe Bazzar Info*/
                 AppDialogHelper(this).showAboutUsCafeBazaar()
+                /**MyKet Info*/
+//                AppDialogHelper(this).showAboutUsMyket()
             }
         }
         return true

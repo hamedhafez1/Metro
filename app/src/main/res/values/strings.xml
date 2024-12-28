@@ -30,7 +30,7 @@
     <string name="metro_brt_combined">ترکیبی مترو و BRT🌍</string>
     <string name="istanbul_metro">مترو استانبول 🌍</string>
     <string name="dubai_metro">مترو دوبی 🌍</string>
-    <string name="najaf_karbala">نجف و کربلا 🌍</string>
+<!--    <string name="najaf_karbala">نجف و کربلا 🌍</string>-->
 <!--    <string name="rate_and_comment_please">با امتیاز و نظر دادن این برنامه را حمایت کنید</string>-->
     <string name="rate_and_comment_please">امتیاز دادن به برنامه</string>
     <string name="our_apps_in_bazaar">برنامه های دیگر ما</string>
@@ -42,4 +42,6 @@
     <string name="weather_api_copyright"> منبع اطالاعات هواشناسی : openweathermap.org</string>
     <string name="enter">به هر حال باز شود</string>
     <string name="open_wireless_settings">رفتن به تنظیمات اینترنت</string>
+    <string name="this_map_not_require_internet">نمایش این نقشه به اینترنت نیاز ندارد.</string>
+    <string name="this_map_require_internet_for_first_time">نمایش این نقشه برای اولین بار به اینترنت نیاز دارد. در استفاده های بعدی نیازی به اتصال اینترنتی نیست.</string>
 </resources>

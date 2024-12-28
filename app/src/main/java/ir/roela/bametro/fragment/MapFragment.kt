@@ -243,7 +243,6 @@ class MapFragment : Fragment() {
 
             else -> {
                 closeMapFragment()
-//                loadMap("file:///android_asset/metro/metro.html")
             }
         }
     }
